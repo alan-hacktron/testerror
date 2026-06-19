@@ -1,0 +1,4 @@
+skip:
+  labels:
+    - skip-scan
+    - no-review
