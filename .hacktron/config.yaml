@@ -1,4 +1,4 @@
 skip:
-  labels:
-    - skip-scan
-    - no-review
+  authors:
+    - alan-hacktron
+    - dependabot
