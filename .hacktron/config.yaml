@@ -1,0 +1,7 @@
+skip:
+  labels:
+    - skip-scan
+    - no-review
+  authors:
+    - some-bot
+    - dependabot
