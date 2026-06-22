@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PostMessage Demo</title>
+</head>
+<body>
+  <h1>PostMessage Receiver</h1>
+  <p id="origin">Waiting for message...</p>
+  <div id="output"></div>
+
+  <script>
+    window.addEventListener('message', (event) => {
+      // Shows the origin but FAILS to validate it (critical bug)
+      document.getElementById('origin').textContent = 'Last message origin: ' + event.origin;
+
+      // Dangerous sink: direct innerHTML assignment of untrusted data
+      const incoming = typeof event.data === 'string' ? event.data : JSON.stringify(event.data);
+      document.getElementById('output').innerHTML = incoming;
+    });
+  </script>
+</body>
+</html>
