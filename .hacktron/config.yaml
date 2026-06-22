@@ -9,3 +9,5 @@ include:
   authors:
     - alan-hacktron
     - zayne
+fail_on:
+  severity: critical
